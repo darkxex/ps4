@@ -1,0 +1,6 @@
+C:\Users\darkx\source\repos\PayloadLoader\PayloadLoader\bin\Debug\PayloadLoader.exe
+C:\Users\darkx\source\repos\PayloadLoader\PayloadLoader\bin\Debug\PayloadLoader.pdb
+C:\Users\darkx\source\repos\PayloadLoader\PayloadLoader\obj\Debug\PayloadLoader.csproj.AssemblyReference.cache
+C:\Users\darkx\source\repos\PayloadLoader\PayloadLoader\obj\Debug\PayloadLoader.csproj.CoreCompileInputs.cache
+C:\Users\darkx\source\repos\PayloadLoader\PayloadLoader\obj\Debug\PayloadLoader.exe
+C:\Users\darkx\source\repos\PayloadLoader\PayloadLoader\obj\Debug\PayloadLoader.pdb
