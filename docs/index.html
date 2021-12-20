@@ -1,7 +1,8 @@
 <html>
 
 <head>
-    <title>pOOBs4 9.00 + Goldhen</title>
+    <title>Cache 9.00 + Goldhen</title>
+	<link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
@@ -53,6 +54,8 @@
         }
     </style>
     <script>
+	if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
+	
         function allset() {
             document.getElementById("loader").style.display = "none";
             document.getElementById("allset").style.display = "block";
