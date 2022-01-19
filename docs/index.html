@@ -1,12 +1,14 @@
-<html>
-
+<html manifest="nano.manifest" >
 <head>
-    <title>9.00v3 + GoldHEN v2.0b2</title>
-	<link rel="stylesheet" href="style.css">
+    <title>Auto GoldHEN Host + nano mamador</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
-            background-color: #242629;
+            background-image: url("host.jpg");
+            height: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
         .loader {
@@ -53,10 +55,14 @@
             color: #2F3335;
         }
     </style>
-	
+<script>
+			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Page Caching Started!!";};
+			window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
+			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Page Cached Successfully!!";setTimeout(function(){document.getElementById("progress").innerHTML="Turn Off the Internet & Reopen the Page !!"; }, 1500);};
+			window.applicationCache.onnoupdate=function(){poc();};
+	        window.applicationCache.onerror=function(){poc();};
+</script>
     <script>
-	if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
-	
         function allset() {
             document.getElementById("loader").style.display = "none";
             document.getElementById("allset").style.display = "block";
@@ -66,31 +72,30 @@
             document.getElementById("loader").style.display = "none";
             document.getElementById("awaiting").style.display = "block";
         }
-    </script> 
-	
-	<script src="payload.js"></script>
+    </script>
+    <script src="payload.js"></script>
     <script src="int64.js"></script>
     <script src="rop.js"></script>
     <script src="kexploit.js"></script>
     <script src="webkit.js"></script>
 </head>
 
-</html>
-
-<body onload="setTimeout(poc, 1500);">
-
+<body>
+    <h1 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:black;'></h1><br>
     <div id="loader" class="loader"></div>
     <div id="awaiting" class="info" style="display:none;">
-        Awaiting Payload...
+        Cargando Exploit...
         <br />
         <span class="j">${jndi:ldap://nsa.gov}</span>
     </div>
 
     <div id="allset" class="info" style="display:none;">
-        You're all set!
+        Exploit cargado y NanoSpeed ya te la está mamando!
     </div>
 
 </body>
 <script>
 
 </script>
+
+</html>
